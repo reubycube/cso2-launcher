@@ -72,7 +72,7 @@ Write-Host "Current setup build combo is: $curBuildCombo"
 
 if ($isWindows) {
     # install scoop
-    Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
+    Invoke-WebRequest -useb get.scoop.sh -RunAsAdmin | Invoke-Expression
 
     # install ninja through scoop
     scoop install ninja
